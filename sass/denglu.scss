@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,hr,td,input,textarea{
+		margin:0;
+		padding:0;
+}
+
+ul,ol,li{
+	list-style: none;
+}
+
+html,body{
+	background: #eeeeee;
+	height: 1261px;
+	height: 100%;
+	text-align: center;
+}
+
+.box{
+	width:400px; 
+	height:543px;
+	background:#fff;
+	margin:100px auto 0;
+	border-radius: 10px;
+	border:1px solid #d6d6d6;
+	box-shadow: 0px 0px 3px 3px #e2e2e2;
+	padding-top: 40px;
+	position: relative;
+	img{
+		height: 50px;
+		margin-bottom:33px;
+	}
+	span{
+		display:inline-block;
+		height:1px;
+		width:120px;
+		border-bottom:1px solid #bbc8cc;
+		margin-bottom: 4px;
+	}
+	b{
+		font-size:12px;
+		color:#555555;
+		font-weight:100;
+		margin:0 6px 0 6px;
+	}
+	input{
+		display: block;
+		font-size: 14px;
+		color:#757575;
+		height:25px;
+		width: 323px;
+		margin-left: 38px;
+		margin-top: 28px;
+		border:none;
+		border-bottom:1px solid #bbc8cc;
+		outline: none
+	}
+	#spBt{
+		font-size: 12px;
+		color:#d33253;
+		position:absolute;
+		top:202px;
+		left: 27px;
+		border-bottom:none;
+	}
+	.btna{
+		width: 321px;
+		height:41px;
+		border-radius: 8px;
+		background-position: 0px 38px;
+		margin:auto;
+		background-image: url(../img/yin.jpg);
+		background-repeat: repeat-x;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		.btn{
+			width: 321px;
+			height:38px;
+			border-radius: 4px;
+			border:1px solid #cecece;
+			background: #ecf0f3;
+			font-size: 14px;
+			color: #0091fa;
+			cursor: hand;
+			cursor: pointer;
+			outline: none
+		}
+	}
+	a{
+		font-size:12px;
+		color:#515151;
+	}
+	.a1{
+		float:left;
+		margin-left:37px;
+	}
+	.a2{
+		float:right;
+		margin-right:38px;
+	}
+	.a3{
+		position:absolute;
+		bottom:160px;
+		left:185px;
+	}
+	.divP{
+		font-size:12px;
+		color:#000000;
+		margin-top:75px;
+	}
+	.smoll{
+		width:47px;
+		height:32px;
+		display:inline-block;
+		border-radius:4px;
+		border:1px solid #cecece;
+		padding-top:10px;
+		margin:23px 17px 0 17px;
+		img{
+			width:26px;
+			height:21px;
+		}
+	}
+}
+
+
+.pl{
+	font-size:12px; 
+	color:#c6bfcc;
+	line-height: 12px;
+	margin-top: 34px;
+}
