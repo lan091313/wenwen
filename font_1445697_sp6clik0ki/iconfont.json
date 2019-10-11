@@ -1,0 +1,16 @@
+{
+  "id": "1445697",
+  "name": "问问",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "425660",
+      "name": "购物车2",
+      "font_class": "gwc",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    }
+  ]
+}
