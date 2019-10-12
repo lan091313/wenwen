@@ -99,28 +99,28 @@ h2 {
 /*left*/
 .left {
   width: 181px;
-  height: 2388px;
+  height: 2405px;
   margin-left: 90px;
   text-align: center;
   padding-top: 60px;
-  background: white;
-  float: left; }
+  float: left;
+  margin-bottom: 20px;
+  background: #fff; }
   .left a {
     font-size: 17px;
     color: #333333;
     line-height: 17px;
     display: block;
     margin-bottom: 47px; }
-    .left .atf{
-      color: #0091ff;
-    }
+  .left .atf {
+    color: #0091ff; }
 
-
-
+/*.left a:hover{
+}*/
 /*change*/
 .big {
   width: 886px;
-  height: 2405px;
+  height: 100%;
   float: right;
   margin-right: 90px;
   display: flex;
@@ -133,7 +133,8 @@ h2 {
     background: #fff;
     border-right: 1px solid #ececec;
     border-bottom: 1px solid #ececec;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 20px; }
     .big .smoll a img {
       height: 275px;
       transition: all .5s;
@@ -159,12 +160,13 @@ h2 {
 .big .smoll img:hover {
   transform: scale(1.2); }
 
-.imgMine{
-    width: 1068px;
-    height: 206px;
-    margin: auto;
-    clear: both;
-} 
+.imgMine {
+  width: 1068px;
+  height: 206px;
+  margin: auto;
+  clear: both; }
+  .imgMine img {
+    border-radius: 5px; }
 
 /*footer*/
 .footertop {
@@ -172,7 +174,7 @@ h2 {
   width: 100%;
   height: 155px;
   background: white;
-  margin-top: 154px;
+  margin-top: 124px;
   border-bottom: 2px solid #dddede; }
   .footertop .top {
     width: 1080px;
@@ -310,5 +312,3 @@ h2 {
 
 .footerbot #fudong a:first-child {
   border-bottom: 1px solid #d7d7d7; }
-
-/*# sourceMappingURL=ticwatch.css.map */
