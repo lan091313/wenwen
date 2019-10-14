@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选项卡</title>
+    <style>
+        .header {
+            width: 400px;
+            height: 40px;
+            border: 1px solid gray;
+        }
+        .header span{
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .bgc{
+            background-color: yellow;
+        }
+        .cont{
+            width:400px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        .cont div{
+            height: 500px;
+            width: 400px;
+            border: 1px solid black;
+            display: none;
+        }
+        div.show{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <!-- 最外层的容器 -->
+    <div class="content">
+        <!-- 1.头部 -->
+        <div class="header">
+            <span class="bgc">充话费</span><span>旅行</span><span>车险</span><span>游戏</span>
+        </div>
+        <!-- 2.内容区域 -->
+        <div class="cont" id="cont">
+            <div class="show">充话费送小孩啦</div>
+            <div>去旅行送二哈啦</div>
+            <div>窝窝头，一块钱四个，嘿嘿</div>
+            <div>百因必有果，你的报应就是我</div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    window.onload = function(){
+        // 1.获取span元素
+        var oSpan = document.getElementsByTagName("span");
+        var oDiv = document.getElementById("cont").getElementsByTagName("div"); 
+
+        for(var i = 0;i<oSpan.length;i++){
+            oSpan[i].index = i;
+            oSpan[i].onclick = function(){
+                //  this.className="";
+                for(var i = 0; i < oSpan.length; i++){
+                  oSpan[i].className = "";
+                }
+                 this.className = "bgc";
+                for(var i = 0;i<oDiv.length;i++){
+                    oDiv[i].className = "";
+                }
+                oDiv[this.index].className = "show";
+            }
+        }
+    }
+</script>
