@@ -11,6 +11,9 @@
 		.sexMine #bigBox .sexMidAd{
 			display: block;
 		}
+		.sexMine #bigBox_1 .sexMidAd_bt{
+			display: block;
+		}
 		.sexMine #bigBox b{
 			display: none;
 		}
@@ -21,7 +24,7 @@
 		#sexBon b{
 			border:2px solid #a8a4a4;
 		}
-		.col{
+		.col_a{
 			border:2px solid #ef4043;
 		}
 	</style>
@@ -94,21 +97,21 @@
 					<i id="sex_left"><img src="img/tic9.png" alt=""></i>
 					<i id="sex_left"><img src="img/tic10.png" alt=""></i>
 				</div>
-				<div id="sexMid">
-					<b class="sexMidAd">
-						<img  src="img/tic1.png" alt="">
+				<div id="sexMid_bt">
+					<b class="sexMidAd_bt">
+						<img  src="img/tic6.png" alt="">
 					</b>
 					<b>
-						<img src="img/tic2.png" alt="">
+						<img src="img/tic7.png" alt="">
 					</b>
 					<b>
-						<img src="img/tic3.png" alt="">
+						<img src="img/tic8.png" alt="">
 					</b>
 					<b>
-						<img src="img/tic4.png" alt="">
+						<img src="img/tic9.png" alt="">
 					</b>
 					<b>
-						<img src="img/tic5.png" alt="">
+						<img src="img/tic10.png" alt="">
 					</b>
 					
 					<div class="mirrorBox" id="mirrorBox" style="display: none;"></div>
@@ -232,35 +235,33 @@
             oSpn[i].index = i;
             oSpn[i].onclick = function(){
                 //  this.className="";
-            for(var i = 0; i < oSpn.length; i++){
-              oSpn[i].style.border="2px solid #a8a4a4";
-            }
-            this.style.border="2px solid #ef4043";
-            for(var i = 0;i<vatBt.length;i++){
-                    $("#bigBox_1").style.display="none"
-                    $("#bigBox").style.display="block"
-                }
-                $("#bigBox_1").style.display="block"
-                $("#bigBox").style.display="none"
-		    }
-		    var imgAch=$("i");
-		    var oDiv =$("#sexMid").getElementsByTagName("b"); 
+	            for(var i = 0; i < oSpn.length; i++){
+	             	oSpn[i].style.border="2px solid #a8a4a4";
+		            $("#bigBox_1").style.display="none"
+		            $("#bigBox").style.display="block"
+	            }
+	            this.style.border="2px solid #ef4043";
+	                $("#bigBox_1").style.display="block"
+	                $("#bigBox").style.display="none"
+			}
+			    var imgAch=$("i");
+			    var oDiv =$("#sexMid").getElementsByTagName("b"); 
 
-		    for(var j = 0;j<imgAch.length;j++){
-		   		 var index = j;
-		        imgAch[j].index = j;
-		        imgAch[j].onclick = function(){
-		            //  this.className="";
-		        for(var j = 0; j < imgAch.length; j++){
-		          imgAch[j].style.border="";
-		        }
-		        this.style.border="3px solid #ffe117";
-		        for(var j = 0;j<oDiv.length;j++){
-		                oDiv[j].className = "";
-		            }
-		            oDiv[this.index].className = "sexMidAd";
-		        }
-		    }
+			    for(var j = 0;j<imgAch.length;j++){
+			   		 var index = j;
+			        imgAch[j].index = j;
+			        imgAch[j].onclick = function(){
+			            //  this.className="";
+			        for(var j = 0; j < imgAch.length; j++){
+			          imgAch[j].style.border="";
+			        }
+			        this.style.border="3px solid #ffe117";
+			        for(var j = 0;j<oDiv.length;j++){
+			                oDiv[j].className = "";
+			            }
+			            oDiv[this.index].className = "sexMidAd";
+			        }
+			    }
         }
 	}
 	// window.onload = function(){
