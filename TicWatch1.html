@@ -8,11 +8,21 @@
 	<link rel="stylesheet" href="css/iconfont.css">
 	<link rel="stylesheet" href="css/TicWatch1.css">
 	<style>
-		.sexMine .bigBox .sexMidAd{
+		.sexMine #bigBox .sexMidAd{
 			display: block;
 		}
-		.sexMine .bigBox b{
+		.sexMine #bigBox b{
 			display: none;
+		}
+		.sexMine #bigBox_1 b{
+			display: none;
+		}
+		
+		#sexBon b{
+			border:2px solid #a8a4a4;
+		}
+		.col{
+			border:2px solid #ef4043;
 		}
 	</style>
 </head>
@@ -47,35 +57,65 @@
 
 	<!-- sex -->
 	<div class="sexMine">
-		<div class="bigBox">
-				
-			<div class="sexLeft">
-				<i id="sex_left" style="border:3px solid #ffe117;"><img src="img/tic1.png" alt=""></i>
-				<i id="sex_left"><img src="img/tic2.png" alt=""></i>
-				<i id="sex_left"><img src="img/tic3.png" alt=""></i>
-				<i id="sex_left"><img src="img/tic4.png" alt=""></i>
-				<i id="sex_left"><img src="img/tic5.png" alt=""></i>
+		<div id="boxMo">
+			<div class="bigBox" id="bigBox" style="display: block;">
+				<div class="sexLeft">
+					<i id="sex_left" style="border:3px solid #ffe117;"><img src="img/tic1.png" alt=""></i>
+					<i id="sex_left"><img src="img/tic2.png" alt=""></i>
+					<i id="sex_left"><img src="img/tic3.png" alt=""></i>
+					<i id="sex_left"><img src="img/tic4.png" alt=""></i>
+					<i id="sex_left"><img src="img/tic5.png" alt=""></i>
+				</div>
+				<div id="sexMid">
+					<b class="sexMidAd">
+						<img  src="img/tic1.png" alt="">
+					</b>
+					<b>
+						<img src="img/tic2.png" alt="">
+					</b>
+					<b>
+						<img src="img/tic3.png" alt="">
+					</b>
+					<b>
+						<img src="img/tic4.png" alt="">
+					</b>
+					<b>
+						<img src="img/tic5.png" alt="">
+					</b>
+					
+					<div class="mirrorBox" id="mirrorBox" style="display: none;"></div>
+				</div>
 			</div>
-			<div id="sexMid">
-				<b class="sexMidAd">
-					<img  src="img/tic1.png" alt="">
-				</b>
-				<b>
-					<img src="img/tic2.png" alt="">
-				</b>
-				<b>
-					<img src="img/tic3.png" alt="">
-				</b>
-				<b>
-					<img src="img/tic4.png" alt="">
-				</b>
-				<b>
-					<img src="img/tic5.png" alt="">
-				</b>
-				
-				<div class="mirrorBox" id="mirrorBox" style="display: none;"></div>
+			<div class="bigBox_1" id="bigBox_1" style="display: none;">
+				<div class="sexLeft">
+					<i id="sex_left" style="border:3px solid #ffe117;"><img src="img/tic6.png" alt=""></i>
+					<i id="sex_left"><img src="img/tic7.png" alt=""></i>
+					<i id="sex_left"><img src="img/tic8.png" alt=""></i>
+					<i id="sex_left"><img src="img/tic9.png" alt=""></i>
+					<i id="sex_left"><img src="img/tic10.png" alt=""></i>
+				</div>
+				<div id="sexMid">
+					<b class="sexMidAd">
+						<img  src="img/tic1.png" alt="">
+					</b>
+					<b>
+						<img src="img/tic2.png" alt="">
+					</b>
+					<b>
+						<img src="img/tic3.png" alt="">
+					</b>
+					<b>
+						<img src="img/tic4.png" alt="">
+					</b>
+					<b>
+						<img src="img/tic5.png" alt="">
+					</b>
+					
+					<div class="mirrorBox" id="mirrorBox" style="display: none;"></div>
+				</div>
 			</div>
 		</div>
+		
 		
 		<div class="sexNone" id="sexNone" style="background-position:0px 0px;display: none; "></div>
 		<div class="sexRight">
@@ -85,10 +125,10 @@
 				<a href="">满99元包邮</a>
 				<p>价格 <span>¥799</span></p>
 			</div>
-			<div class="sexBon">
+			<div id="sexBon">
 				<p>颜色</p>
-				<b class="col">奇幻蓝</b>
-				<b>童话粉</b>
+				<b class="col_a">奇幻蓝</b>
+				<b class="col_b">童话粉</b>
 				<p>选择数据</p>
 				<span>-</span>
 				<input type="text" value="1">
@@ -117,7 +157,6 @@
 		<img src="img/kid11.jpg" alt="">
 		<img src="img/kid12.jpg" alt="">
 	</div>
-
 	<div class="footerbot">
 		<div class="mid">
 			<div class="footerleft">
@@ -184,26 +223,67 @@
 <script type="text/javascript">
 
 	// 选项卡
-	  window.onload = function(){
-        var imgAch=$("i");
-        var oDiv =$("#sexMid").getElementsByTagName("b"); 
+	window.onload = function(){
+        var oSpn =$("#sexBon").getElementsByTagName("b"); 
+        var vatBt=$("#boxMo").getElementsByTagName("div")
 
-        for(var i = 0;i<imgAch.length;i++){
+        for(var i = 0;i<oSpn.length;i++){
        		 var index = i;
-            imgAch[i].index = i;
-            imgAch[i].onclick = function(){
+            oSpn[i].index = i;
+            oSpn[i].onclick = function(){
                 //  this.className="";
-                for(var i = 0; i < imgAch.length; i++){
-                  imgAch[i].style.border="";
-                }
-                this.style.border="3px solid #ffe117";
-                for(var i = 0;i<oDiv.length;i++){
-	                    oDiv[i].className = "";
-	                }
-	                oDiv[this.index].className = "sexMidAd";
-	            }
+            for(var i = 0; i < oSpn.length; i++){
+              oSpn[i].style.border="2px solid #a8a4a4";
             }
+            this.style.border="2px solid #ef4043";
+            for(var i = 0;i<vatBt.length;i++){
+                    $("#bigBox_1").style.display="none"
+                    $("#bigBox").style.display="block"
+                }
+                $("#bigBox_1").style.display="block"
+                $("#bigBox").style.display="none"
+		    }
+		    var imgAch=$("i");
+		    var oDiv =$("#sexMid").getElementsByTagName("b"); 
+
+		    for(var j = 0;j<imgAch.length;j++){
+		   		 var index = j;
+		        imgAch[j].index = j;
+		        imgAch[j].onclick = function(){
+		            //  this.className="";
+		        for(var j = 0; j < imgAch.length; j++){
+		          imgAch[j].style.border="";
+		        }
+		        this.style.border="3px solid #ffe117";
+		        for(var j = 0;j<oDiv.length;j++){
+		                oDiv[j].className = "";
+		            }
+		            oDiv[this.index].className = "sexMidAd";
+		        }
+		    }
         }
+	}
+	// window.onload = function(){
+	//     var imgAch=$("i");
+	//     var oDiv =$("#sexMid").getElementsByTagName("b"); 
+
+	//     for(var i = 0;i<imgAch.length;i++){
+	//    		 var index = i;
+	//         imgAch[i].index = i;
+	//         imgAch[i].onclick = function(){
+	//             //  this.className="";
+	//         for(var i = 0; i < imgAch.length; i++){
+	//           imgAch[i].style.border="";
+	//         }
+	//         this.style.border="3px solid #ffe117";
+	//         for(var i = 0;i<oDiv.length;i++){
+	//                 oDiv[i].className = "";
+	//             }
+	//             oDiv[this.index].className = "sexMidAd";
+	//         }
+	//     }
+	// }
+	
 
 
 	$("#footerright").onmousedown = function(event){
