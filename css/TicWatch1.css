@@ -107,9 +107,9 @@ h2 {
   height: 517px;
   width: 1080px;
   margin: 31px auto 0;
-  background: red;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative; }
   .sexMine .sexLeft {
     height: 424px;
     width: 81px; }
@@ -117,8 +117,10 @@ h2 {
       width: 75px;
       height: 75px;
       background: #fff;
-      margin: 8px auto 0;
-      box-sizing: content-box; }
+      margin: 10px auto 0;
+      box-sizing: content-box;
+      cursor: hand;
+      cursor: pointer; }
       .sexMine .sexLeft .sex_left img {
         width: 75px;
         height: 75px; }
@@ -128,24 +130,36 @@ h2 {
   .sexMine .sexMid {
     width: 448px;
     height: 434px;
-    background: #fff; }
+    background: #fff;
+    position: relative; }
     .sexMine .sexMid img {
       width: 448px;
       height: 434px; }
+    .sexMine .sexMid .mirrorBox {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #cfcfcf;
+      background: #fff;
+      opacity: .5; }
   .sexMine .sexNone {
     width: 448px;
     height: 434px;
     background: #fff;
-    border-bottom: 1px solid #cfcfcf;
-    display: none; }
+    border: 1px solid #cfcfcf;
+    position: absolute;
+    right: 60px;
+    top: 0px;
+    background-image: url(../img/tic1.png);
+    background-size: 896px 868px; }
   .sexMine .sexRight {
     width: 488px;
-    height: 434px;
-    background: yellow; }
+    height: 434px; }
     .sexMine .sexRight .sexTop {
       width: 488px;
       height: 164px;
-      background: blue;
       border-bottom: 1px solid #ebe6e6; }
       .sexMine .sexRight .sexTop b {
         font-size: 18px;
@@ -159,6 +173,72 @@ h2 {
         color: #999999;
         line-height: 0px;
         margin: 14px 0; }
+      .sexMine .sexRight .sexTop a {
+        display: inline-block;
+        width: 90px;
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+        background: #ffe117;
+        color: #444444;
+        text-align: center; }
+      .sexMine .sexRight .sexTop p {
+        font-size: 12px;
+        line-height: 12px;
+        color: #f05156;
+        margin-top: 38px; }
+        .sexMine .sexRight .sexTop p span {
+          font-size: 16px;
+          line-height: 16px;
+          color: #f05156; }
+    .sexMine .sexRight .sexBon {
+      width: 488px;
+      height: 270px;
+      padding-top: 28px; }
+      .sexMine .sexRight .sexBon p {
+        font-size: 14px;
+        line-height: 12px;
+        color: #000; }
+      .sexMine .sexRight .sexBon b {
+        display: inline-block;
+        width: 58px;
+        height: 35px;
+        font-size: 14px;
+        line-height: 35px;
+        color: #333;
+        border-radius: 2px;
+        text-align: center;
+        border: 2px solid #a8a4a4;
+        margin: 13px 10px 23px 0;
+        font-weight: 100; }
+      .sexMine .sexRight .sexBon span {
+        font-size: 12px;
+        font-weight: 600; }
+      .sexMine .sexRight .sexBon input {
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        background: #fff;
+        border: 1px solid #cacaca;
+        text-align: center;
+        border-radius: 5px;
+        margin: 20px 0; }
+      .sexMine .sexRight .sexBon .col {
+        border: 2px solid #ef4043; }
+      .sexMine .sexRight .sexBon a {
+        display: inline-block;
+        width: 280px;
+        height: 50px;
+        font-size: 16px;
+        color: #fbf3ff;
+        background: #ef4043;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 2px; }
+
+.image {
+  width: 1080px;
+  margin: auto; }
 
 /*footer*/
 .footertop {
