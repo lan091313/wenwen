@@ -110,40 +110,46 @@ h2 {
   display: flex;
   justify-content: space-between;
   position: relative; }
-  .sexMine .sexLeft {
-    height: 424px;
-    width: 81px; }
-    .sexMine .sexLeft .sex_left {
-      width: 75px;
-      height: 75px;
-      background: #fff;
-      margin: 10px auto 0;
-      box-sizing: content-box;
-      cursor: hand;
-      cursor: pointer; }
-      .sexMine .sexLeft .sex_left img {
+  .sexMine .bigBox {
+    display: flex;
+    justify-content: space-between; }
+    .sexMine .bigBox .sexLeft {
+      height: 424px;
+      width: 81px;
+      /*.sex_nth{
+				margin-top:0px;
+				border:3px solid #ffe117;
+			}*/ }
+      .sexMine .bigBox .sexLeft #sex_left {
+        display: block;
         width: 75px;
-        height: 75px; }
-    .sexMine .sexLeft .sex_nth {
-      margin-top: 0px;
-      border: 3px solid #ffe117; }
-  .sexMine .sexMid {
-    width: 448px;
-    height: 434px;
-    background: #fff;
-    position: relative; }
-    .sexMine .sexMid img {
+        height: 75px;
+        background: #fff;
+        margin: 10px auto 0;
+        box-sizing: content-box;
+        cursor: hand;
+        cursor: pointer; }
+        .sexMine .bigBox .sexLeft #sex_left img {
+          width: 75px;
+          height: 75px; }
+    .sexMine .bigBox #sexMid {
       width: 448px;
-      height: 434px; }
-    .sexMine .sexMid .mirrorBox {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 200px;
-      height: 200px;
-      border: 1px solid #cfcfcf;
+      height: 434px;
       background: #fff;
-      opacity: .5; }
+      position: relative;
+      margin-left: 40px; }
+      .sexMine .bigBox #sexMid img {
+        width: 448px;
+        height: 434px; }
+      .sexMine .bigBox #sexMid .mirrorBox {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #cfcfcf;
+        background: #fff;
+        opacity: .5; }
   .sexMine .sexNone {
     width: 448px;
     height: 434px;
@@ -236,9 +242,19 @@ h2 {
         text-align: center;
         border-radius: 2px; }
 
+.vid {
+  width: 1080px;
+  height: 608px;
+  margin: auto;
+  background: red; }
+
+video {
+  width: 1080px;
+  height: 608px; }
+
 .image {
   width: 1080px;
-  margin: auto; }
+  margin: 0 auto; }
 
 /*footer*/
 .footertop {
