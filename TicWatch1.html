@@ -46,26 +46,45 @@
 			<div class="sex_left"><img src="img/tic4.png" alt=""></div>
 			<div class="sex_left"><img src="img/tic5.png" alt=""></div>
 		</div>
-		<div class="sexMid">
+		<div class="sexMid" id="sexMid">
 			<img src="img/tic1.png" alt="">
+			<div class="mirrorBox" id="mirrorBox" style="display: none;"></div>
 		</div>
-		<div class="sexNone"></div>
+		<div class="sexNone" id="sexNone" style="background-position:0px 0px;display: none; "></div>
 		<div class="sexRight">
 			<div class="sexTop">
 				<b>TicWatch Kids</b>
 				<strong>4G全网通 | 楼层级定位 | AI儿童手表</strong>
-				<a>满99元包邮</a>
+				<a href="">满99元包邮</a>
 				<p>价格 <span>¥799</span></p>
 			</div>
 			<div class="sexBon">
 				<p>颜色</p>
-				<span>奇幻蓝</span>
-				<span>童话粉</span>
+				<b class="col">奇幻蓝</b>
+				<b>童话粉</b>
 				<p>选择数据</p>
+				<span>-</span>
+				<input type="text" value="1">
+				<span>+</span><br>
 				<a href="">加入购物车</a>
 			</div>
 		</div>
 	</div>
+	<div class="image">
+		<img src="img/kid1.png" alt="">
+		<img src="img/kid2.jpg" alt="">
+		<img src="img/kid3.jpg" alt="">
+		<img src="img/kid4.jpg" alt="">
+		<img src="img/kid5.jpg" alt="">
+		<img src="img/kid6.jpg" alt="">
+		<img src="img/kid7.jpg" alt="">
+		<img src="img/kid8.jpg" alt="">
+		<img src="img/kid9.jpg" alt="">
+		<img src="img/kid10.jpg" alt="">
+		<img src="img/kid11.jpg" alt="">
+		<img src="img/kid12.jpg" alt="">
+	</div>
+	
 	
 
 	<div class="footerbot">
@@ -135,31 +154,66 @@
 
 
 
-$("#footerright").onmousedown = function(event){
-	var evt = event || window.event;
+	$("#footerright").onmousedown = function(event){
+		var evt = event || window.event;
 
-	$("#fudong").style.display = "block";
-}
-$("#fudong").onmouseover = function(event){
-	var evt = event || window.event;
+		$("#fudong").style.display = "block";
+	}
+	$("#fudong").onmouseover = function(event){
+		var evt = event || window.event;
 
-	$("#fudong").style.display = "block";
-}
-$("#fudong").onmouseout = function(event){
-	var evt = event || window.event;
+		$("#fudong").style.display = "block";
+	}
+	$("#fudong").onmouseout = function(event){
+		var evt = event || window.event;
 
-	$("#fudong").style.display = "none";
-}
+		$("#fudong").style.display = "none";
+	}
 
- function $(str){
-    if(str[0]=="#"){
-        return document.getElementById(str.substring(1));
-    }else if(str[0]=="."){
-        return document.getElementsByClassName(str.substring(1));
-    }else{
-        return document.getElementsByTagName(str);
-    }
-}
+
+	// 放大镜
+	$("#sexMid").onmousemove = function(event){
+	    let evt = event || window.event;
+	    $("#sexNone").style.display="block"
+	    $("#mirrorBox").style.display="block"
+	    //一、处理数据
+	    //1、
+	    let left1 = evt.pageX-$("#sexMid").offsetLeft-($("#mirrorBox").offsetWidth)/2;
+	    let top1 =  evt.pageY-$("#sexMid").offsetTop-($("#mirrorBox").offsetHeight)/2;
+	    //2、
+	    if(left1<0){
+	        left1=0;
+	    }else if(left1>448-200){
+	        left1=448-200
+	    }
+	    
+	    if(top1<0){
+	        top1=-58;
+	    }else if(top1>434-200){
+	        top1=434-200
+	    }
+
+	    //二、改变外观
+	    $("#mirrorBox").style.left = left1+"px";
+	    $("#mirrorBox").style.top = top1+"px";
+	    $("#sexNone").style.backgroundPosition = `-${left1*2}px -${top1*2}px`;
+
+	}
+	$("#sexMid").onmouseout = function(event){
+	    let evt = event || window.event;
+	    $("#sexNone").style.display="none"
+	    $("#mirrorBox").style.display="none"
+	}
+
+	 function $(str){
+	    if(str[0]=="#"){
+	        return document.getElementById(str.substring(1));
+	    }else if(str[0]=="."){
+	        return document.getElementsByClassName(str.substring(1));
+	    }else{
+	        return document.getElementsByTagName(str);
+	    }
+	}
 </script>
 
 
