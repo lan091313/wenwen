@@ -12,7 +12,10 @@ gulp.task("watchall",async()=>{
 		gulp.src("*.html")
 		.pipe(gulp.dest("d:\\phpstudy\\www\\wenwen"))
 	});
-
+	gulp.watch("php/*.php",async()=>{
+		gulp.src("php/*.php")
+		.pipe(gulp.dest("d:\\phpstudy\\www\\wenwen\\php"))
+	});
 	gulp.watch("img",async()=>{
 		gulp.src("img/**/*")
 		.pipe(gulp.dest("d:\\phpstudy\\www\\wenwen\\img"))
@@ -23,19 +26,21 @@ gulp.task("watchall",async()=>{
 		.pipe(sass())
 		.pipe(gulp.dest("d:\\wenwen\\css"))
 	})
-	
 
-     gulp.watch("css/*.css",async ()=>{
+    gulp.watch("css/*.css",async ()=>{
         gulp.src("css/*.css")
 		.pipe(minifycss())
         .pipe(gulp.dest("d:\\phpstudy\\www\\wenwen\\css"));
     });
 
-    //  gulp.watch("js/*.js",async ()=>{
-    //     gulp.src("js/*.js")
-    //     .pipe(babel({presets:[es2015Preset]}))
-    //     .pipe(uglify())
-    //     .pipe(gulp.dest("d:\\phpstudy\\www\\wenwen\\js"));
-    // });
+    gulp.watch("images",async()=>{
+     	gulp.src("img/**/*")
+     	.pipe(gulp.dest("d:\\phpstudy\\www\\wenwen\\img"))
+     })
+
+    gulp.watch("js/**/*",async ()=>{
+        gulp.src("js/**/*")
+        .pipe(gulp.dest("d:\\phpstudy\\www\\wenwen\\js"));
+    });
 
 })
