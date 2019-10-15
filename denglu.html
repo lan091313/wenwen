@@ -17,7 +17,8 @@
 		<span id="spBt" style="display: none;">请输入正确手机号</span>
 		<input id="subMit" type="text" placeholder="密码">
 		<div class="btna">
-			<button type="text" class="btn btn-default">登录</button>
+			<button id="btnlong" type="text" class="btn btn-default">登录</button>
+			<div id="messageBox"></div>
 		</div>
 		<a href="ceshi.html" class="a1">忘记密码?</a>
 		<a href="ceshi.html" class="a2">动态密码登录</a><br>
@@ -51,6 +52,29 @@
  		$("#subn").style.borderBottom= "1px solid #bbc8cc";
   	}
   	
+
+  	$("#btnlong").onclick = function(){
+    //1、
+	    let xhr = new XMLHttpRequest();
+
+	    xhr.open("post","php/denglu.php",true);
+
+	    xhr.onreadystatechange = function(){
+	        if(xhr.readyState==4 && xhr.status==200){
+	            if(xhr.responseText=="1"){
+	                location.href="index.html";
+	            }else{
+	                $("#messageBox").innerHTML = "亲，用户名或者密码不对";
+	            }
+	        }
+	    }
+	    //post方式：设置请求头
+	    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	    //post方式：把传给服务器端数据（键值对）放在send函数的参数里。
+	    let sendstr = `username=${$("#spBt").value}&userpass=${$("#subMit").value}`;
+	    xhr.send(sendstr);
+	}
+
 
 	function $(str){
 	    if(str[0]=="#"){

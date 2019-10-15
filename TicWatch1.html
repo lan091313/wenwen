@@ -118,9 +118,9 @@
 				<b class="col_a cur">奇幻蓝</b>
 				<b class="col_b">童话粉</b>
 				<p>选择数据</p>
-				<span>-</span>
-				<input type="text" value="1">
-				<span>+</span><br>
+				<span id="left">-</span>
+				<input id="numCha" type="text" value="1">
+				<span id="right">+</span><br>
 				<a href="">加入购物车</a>
 			</div>
 		</div>
@@ -327,162 +327,33 @@
 	});
 
 
-
-
-
-
-
-	// //   for(var i = 0;i<oSpn.length;i++){
-	// //  		 var index = i;
-	// //       oSpn[i].index = i;
-	// //       oSpn[i].onclick = function(){
-	// //         for(var i = 0; i < oSpn.length; i++){
-	// //          	oSpn[i].style.border="2px solid #a8a4a4";
-	// //           $("#bigBox_1").style.display="none"
-	// //           $("#bigBox").style.display="block"
-	// //         }
-	// //         this.style.border="2px solid #ef4043";
-	// //           $("#bigBox_1").style.display="block"
-	// //           $("#bigBox").style.display="none"
-	// // }
-	// var imgAch = $("i");
-	// var oDiv = $("#sexMid").getElementsByTagName("b");
-
-	// for (var j = 0; j < imgAch.length; j++) {
-	// 	var index = j;
-	// 	imgAch[j].index = j;
-	// 	imgAch[j].onclick = function () {
-	// 		//  this.className="";
-	// 		for (var j = 0; j < imgAch.length; j++) {
-	// 			imgAch[j].style.border = "";
-	// 		}
-	// 		this.style.border = "3px solid #ffe117";
-
-	// 		for (var j = 0; j < oDiv.length; j++) {
-	// 			oDiv[j].className = "";
-	// 		}
-	// 		oDiv[this.index].className = "sexMidAd";
-	// 		$(".sexMidAd").style.backgroundImage = ""
-	// 	}
-	// }
-	// //       }
-	// // }
-	// // window.onload = function(){
-	// //     var imgAch=$("i");
-	// //     var oDiv =$("#sexMid").getElementsByTagName("b"); 
-
-	// //     for(var i = 0;i<imgAch.length;i++){
-	// //    		 var index = i;
-	// //         imgAch[i].index = i;
-	// //         imgAch[i].onclick = function(){
-	// //             //  this.className="";
-	// //         for(var i = 0; i < imgAch.length; i++){
-	// //           imgAch[i].style.border="";
-	// //         }
-	// //         this.style.border="3px solid #ffe117";
-	// //         for(var i = 0;i<oDiv.length;i++){
-	// //                 oDiv[i].className = "";
-	// //             }
-	// //             oDiv[this.index].className = "sexMidAd";
-	// //         }
-	// //     }
-	// // }
-
-
-
-	// $("#footerright").onmousedown = function (event) {
-	// 	var evt = event || window.event;
-
-	// 	$("#fudong").style.display = "block";
-	// }
-	// $("#fudong").onmouseover = function (event) {
-	// 	var evt = event || window.event;
-
-	// 	$("#fudong").style.display = "block";
-	// }
-	// $("#fudong").onmouseout = function (event) {
-	// 	var evt = event || window.event;
-
-	// 	$("#fudong").style.display = "none";
-	// }
-
-
-	// 放大镜
-	// $("#sexMid").onmousemove = function (event) {
-	// 	let evt = event || window.event;
-	// 	$("#sexNone").style.display = "block"
-	// 	$("#mirrorBox").style.display = "block"
-	// 	//一、处理数据
-	// 	//1、
-	// 	let left1 = evt.pageX - $("#sexMid").offsetLeft - ($("#mirrorBox").offsetWidth) / 2;
-	// 	let top1 = evt.pageY - $("#sexMid").offsetTop - ($("#mirrorBox").offsetHeight) / 2;
-	// 	//2、
-	// 	if (left1 < 0) {
-	// 		left1 = 0;
-	// 	} else if (left1 > 448 - 200) {
-	// 		left1 = 448 - 200
-	// 	}
-
-	// 	if (top1 < 0) {
-	// 		top1 = -58;
-	// 	} else if (top1 > 434 - 200) {
-	// 		top1 = 434 - 200
-	// 	}
-
-	// 	//二、改变外观
-	// 	$("#mirrorBox").style.left = left1 + "px";
-	// 	$("#mirrorBox").style.top = top1 + "px";
-	// 	$("#sexNone").style.backgroundPosition = `-${left1 * 2}px -${top1 * 2}px`;
-
-	// }
-	// $("#sexMid").onmouseout = function (event) {
-	// 	let evt = event || window.event;
-	// 	$("#sexNone").style.display = "none"
-	// 	$("#mirrorBox").style.display = "none"
-	// }
-	// $("#sexMid_bt").onmousemove = function (event) {
-	// 	let evt = event || window.event;
-	// 	$("#sexNone").style.display = "block"
-	// 	$("#mirrorBox").style.display = "block"
-	// 	//一、处理数据
-	// 	//1、
-	// 	let left1 = evt.pageX - $("#sexMid_bt").offsetLeft - ($("#mirrorBox").offsetWidth) / 2;
-	// 	let top1 = evt.pageY - $("#sexMid_bt").offsetTop - ($("#mirrorBox").offsetHeight) / 2;
-	// 	//2、
-	// 	if (left1 < 0) {
-	// 		left1 = 0;
-	// 	} else if (left1 > 448 - 200) {
-	// 		left1 = 448 - 200
-	// 	}
-
-	// 	if (top1 < 0) {
-	// 		top1 = -58;
-	// 	} else if (top1 > 434 - 200) {
-	// 		top1 = 434 - 200
-	// 	}
-
-	// 	//二、改变外观
-	// 	$("#mirrorBox").style.left = left1 + "px";
-	// 	$("#mirrorBox").style.top = top1 + "px";
-	// 	$("#sexNone").style.backgroundPosition = `-${left1 * 2}px -${top1 * 2}px`;
-
-	// }
-	// $("#sexMid_bt").onmouseout = function (event) {
-	// 	let evt = event || window.event;
-	// 	$("#sexNone").style.display = "none"
-	// 	$("#mirrorBox").style.display = "none"
-	// }
-
-
-
-
-	// function $(str) {
-	// 	if (str[0] == "#") {
-	// 		return document.getElementById(str.substring(1));
-	// 	} else if (str[0] == ".") {
-	// 		return document.getElementsByClassName(str.substring(1));
-	// 	} else {
-	// 		return document.getElementsByTagName(str);
-	// 	}
-	// }
+var spanLeft = document.getElementById("left");
+var spanRight = document.getElementById("right");
+var number = document.getElementById("numCha");
+window.onload = function () {
+    //减法
+    spanLeft.onclick = function(){
+        //一、输入
+        let num = number.value;
+        //二、逻辑
+        //1、修改数量的
+        num--;
+        if(num<=0){
+            num=0;
+        }
+        //三、输出
+        number.value = num;
+    }
+    spanRight.onclick = function(){
+        //一、输入
+        let num = number.value;
+        //二、逻辑
+        //1、修改数量的
+        num++;
+        //三、输出
+        number.value = num;
+    }
+    
+}
+	
 </script>
