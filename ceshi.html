@@ -10,7 +10,7 @@
 		<img src="img/logo2.png" alt="">
 		<input class="sub" id="subn" type="text" placeholder="手机号" style="border-bottom:1px solid #bbc8cc;">
 		<span id="spBt" style="display: none;">请输入正确手机号</span>
-		<input id="subMit" type="text" placeholder="密码">
+		<input id="subMit" type="password" placeholder="密码">
 		<div class="imgas" id="imgas">
 			<img id="igs1" src="img/close-eye.png" alt="" style="display: block;">
 			<img id="igs2" src="img/open-eye.png" alt="" style="display: none;">
@@ -21,7 +21,8 @@
 			<li id="liId3" style="background-image: url(img/fill.png)">至少包含一个字母</li>
 		</ul>
 		<div class="btna">
-			<button type="submit" class="btn btn-default">立即注册</button>
+			<button id="sub_id" type="submit" class="btn btn-default">立即注册</button>
+			<div id="messageBox"></div>
 		</div>
 		<div class="p">
 			<p>点击"立即注册"代表您同意遵守</p>
@@ -39,13 +40,13 @@
 		if($("#igs1").style.display == "block"){
 			$("#igs2").style.display = "block";
 			$("#igs1").style.display = "none";
+			$("#subMit").type = "text"
 		}else if($("#igs2").style.display = "block"){
 			$("#igs1").style.display = "block";
 			$("#igs2").style.display = "none";
+			$("#subMit").type = "password"
 		}
-		
 	}
-
 	$("#subn").onblur = function(){
 		var r =  /^1[3-9]\d{9}$/ 
 
@@ -61,15 +62,65 @@
  		$("#subn").style.borderBottom= "1px solid #bbc8cc";
   	}
   	$("#subMit").onblur = function(){
-		var r =  /[1-9a-zA-Z_]{8}/ 
-
-  	 	if(r.test(this.value)){
-  	 		$("#liId1").style.backgroundImage="img/success-icon.png";
-  	 	}else{
-  	 		$("#liId1").style.backgroundImage="img/fill.png";
-  	 	}
+  		var r;
+  		if(r =  /\w{8}/){
+			if(r.test(this.value)){
+		  	 		$("#liId1").style.backgroundImage="url(img/success-icon.png)";
+		  	 	}else{
+		  	 		$("#liId1").style.backgroundImage="url(img/fill.png)";
+	  	 	}
+  		}
+  		if(r =  /\d/ ){
+  			if(r.test(this.value)){
+		  	 		$("#liId2").style.backgroundImage="url(img/success-icon.png)";
+		  	 	}else{
+		  	 		$("#liId2").style.backgroundImage="url(img/fill.png)";
+	  	 	}
+	  	 }
+	  	 if(r =  /[a-zA-Z]/){
+			if(r.test(this.value)){
+				  	 $("#liId3").style.backgroundImage="url(img/success-icon.png)";
+		  	 	}else{
+		  	 		$("#liId3").style.backgroundImage="url(img/fill.png)";
+	  	 	}
+	  	}
   	}
-  	
+
+$("#sub_id").onclick = function(){
+    //1、
+    let xhr = new XMLHttpRequest();
+
+		xhr.open("post","php/zhuce.php",true);
+
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState==4 && xhr.status==200){
+	            if(xhr.responseText=="-1"){
+	                $("#messageBox").style.color ="red";
+	                $("#messageBox").innerHTML ="用户名被人使用";
+	            }else if(xhr.responseText=="0"){
+	                $("#messageBox").style.color ="red";
+	                $("#messageBox").innerHTML ="注册失败";
+	            }else if(xhr.responseText=="1"){
+	                $("#messageBox").style.color ="greenyellow";
+	                $("#messageBox").innerHTML ="注册成功，请<a href='denglu.html'>登录</a>";
+	            }
+	        }
+		}
+		//post方式：设置请求头
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		//post方式：把传给服务器端数据（键值对）放在send函数的参数里
+		let sendstr = `userphone=${$("#subn").value}&userpass=${$("#subMit").value}`;
+		xhr.send(sendstr);
+
+}
+
+function check(){
+    //非空判断：
+    if(userphone.value=="" || userpass.value=="" || checkpass.value==""){
+        alert("亲，内容不能为空");
+        return false;//阻止浏览器的默认行为
+    }
+ }	
 
 	function $(str){
 	    if(str[0]=="#"){
