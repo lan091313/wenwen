@@ -363,8 +363,9 @@ sexMine #boxMo .bigBox .sexLeft_1 {
 }
 
 .sexMine .sexRight #sexBon span {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
+  margin:5px;
 }
 
 .sexMine .sexRight #sexBon input {

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>智能音箱</title>
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/shopping.css">
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<div class="head">
+			<a href=""><img src="img/logo.png" alt=""></a>
+			<a href="ticwatch.html">问问手表</a>
+			<a href="tickasa.html">问问音箱</a>
+			<a href="free.html">问问耳机</a>
+			<a href="watch.html">配件周边</a>
+		</div>
+		<div class="headright">
+			<a href="ceshi.html">注册</a>
+			<a href="denglu.html">登录</a>
+			<a href="">
+				<span class="iconfont icon-gwc"></span>
+			</a>
+			<span class="span">0</span>
+		</div>
+	</div>
+	
+	<!-- shopBar -->
+	<div class="winder">
+		<div class="shopBar">购物车</div>
+		<table style="">
+			<tr style="height: 52px;">
+				<th style="width: 97px;">
+					<input type="checkbox"> 全选
+				</th>
+				<th style="width: 300px;">商品名称</th>
+				<th style="width: 265px;">样式</th>
+				<th style="width: 104px;">单价</th>
+				<th style="width: 138px;">数量</th>
+				<th style="width: 106px;">小计</th>
+				<th style="width: 70px;">操作</th>
+			</tr>
+			<tr>
+				<td style="widtd: 97px;">
+					<input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				</td>
+				<td style="width: 300px;">TicWatch 1</td>
+				<td style="width: 265px;">梦幻蓝</td>
+				<td style="width: 104px;">￥ <span>299</span> </td>
+				<td style="width: 138px;">
+					<button> - </button>
+					<input id="inNum" type="text" value="0"> 
+					<button> + </button>
+				</td>
+				<td style="width: 106px;">￥ <span>299.00</span> </td>
+				<td style="width: 70px;">
+					<button id="clect">删除</button>
+				</td>
+			</tr>
+			<tr>
+				<td style="widtd: 97px;">
+					<input type="checkbox"> 全选
+				</td>
+				<td style="width: 300px;">清除下架商品</td>
+				<td style="width: 106px; text-align: right; " colspan="5">
+					已选商品 <span>1</span> 件 合计（不含运费）：<b>￥</b> <span>299.00</span>
+					<button id="addId">确认结算</button></td>
+			</tr>
+			
+		</table>
+	</div>
+
+	<!-- footer -->
+	<div class="footertop">
+		<div class="top">
+			<div class="sectiona">
+				<a href="change.html">
+					<div class="smo smo1"></div>
+					<p>7天无理由退货</p>
+				</a>
+			</div>
+			<div class="sectiona">
+				<a href="return.html">
+					<div class="smo smo2"></div>
+					<p>15天免费换货</p>
+				</a>
+			</div>
+			<div class="sectiona">
+				<a href="ship.html">
+					<div class="smo smo3"></div>
+					<p>满99顺丰包邮</p>
+				</a>
+			</div>
+			<div class="sectiona">
+				<a href="">
+					<div class="smo smo4"></div>
+					<p class="pl"> 400-8838-390</p>
+					<span>(周一至周日9:00-19:00)</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="footerbot">
+		<div class="mid">
+			<div class="footerleft">
+				<div class="box">
+					<b>产品</b>
+					<a href="">问问手表</a>
+					<a href="">问问音箱</a>
+					<a href="">问问耳机</a>
+					<a href="">配件周边</a>
+				</div>
+				<div class="box">
+					<b>帮助</b>
+					<a href="">配对应用</a>
+					<a href="">引导教程</a>
+					<a href="">视频指导</a>
+					<a href="">售后政策</a>
+				</div>
+				<div class="box">
+					<b>媒体</b>
+					<a href="">公司新闻</a>
+					<a href="">产品消息</a>
+					<a href="">媒体报道</a>
+					<a href="">视频</a>
+				</div>
+				<div class="box">
+					<b>用户</b>
+					<a href="">问问论坛</a>
+					<a href="">推荐奖励</a>
+					<a href="">售后服务</a>
+					<a href="">开放品台</a>
+				</div>
+				<div class="box">
+					<b>关于</b>
+					<a href="">关于我们</a>
+					<a href="">联系我们</a>
+				</div>
+			</div>
+			<div class="footerright" id="footerright">
+				中文（简体）
+				<div class="san"></div>
+
+			</div>
+			<div class="fudong" id="fudong">
+				<a href="">中文（简体）</a>
+				<a href="">中文（繁體）</a>
+				<a href="">English</a>
+			</div>
+		</div>
+		<div class="foot">
+			<p>Copyright © 2019Mobvoi Inc. All Rights Reserved. 北京羽扇智信息科技有限公司 <span>|</span> 京ICP备14058077号-1 <span>|</span> 京公网安备11010802023146</p>
+			<a href="">服务条款</a><span>|</span>  
+			<a href="">隐私条款</a><span>|</span> 
+			<a href="">儿童隐私政策</a>
+		</div>
+	</div>
+</body>
+</html>
+
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+var footerright = document.getElementById("footerright");
+var fudong = document.getElementById("fudong");
+
+footerright.onmousedown = function(event){
+	var evt = event || window.event;
+
+	fudong.style.display = "block";
+}
+fudong.onmouseover = function(event){
+	var evt = event || window.event;
+
+	fudong.style.display = "block";
+}
+fudong.onmouseout = function(event){
+	var evt = event || window.event;
+
+	fudong.style.display = "none";
+}
+
+
+
+
+
+let trs = document.getElementById("t").rows;
+
+//计算总计
+function getTotalMoney(){
+    let totalMoney = 0;
+    for(let i=1;i<trs.length-1;i++){
+        totalMoney += parseFloat(trs[i].cells[4].innerHTML);
+    }
+    return totalMoney;
+}
+
+function changeNum(btn,isAdd){
+    //一、输入
+    let num = btn.parentNode.children[1].innerHTML;   
+    let price = parseFloat(btn.parentNode.previousElementSibling.innerHTML);
+    //二、逻辑
+    //1、修改数量的
+    isAdd?num++:num--;
+    if(num<=0){
+        num=0;
+    }
+    //2、小计
+    let money = price*num;
+    //三、输出
+    btn.parentNode.children[1].innerHTML = num;
+    btn.parentNode.nextElementSibling.innerHTML = money;
+    //3、总计
+    let totalMoney = getTotalMoney();
+    $("#t").rows[$("#t").rows.length-1].cells[0].lastElementChild.innerHTML = totalMoney;
+}
+
+window.onload = function () {
+    //减法
+    for(let i=1;i<trs.length-1;i++){
+        //减法的按钮
+        let reduceBtn = trs[i].cells[3].firstElementChild;
+        reduceBtn.onclick = function(){
+            changeNum(this,false);
+        }
+        //加法的按钮
+        let addBtn = trs[i].cells[3].lastElementChild;
+        addBtn.onclick = function(){
+            changeNum(this,true);
+        }
+
+        //删除按钮
+        let delBtn = trs[i].lastElementChild.children[0];
+        delBtn.onclick = function(){
+            if(confirm("亲，您真的要删除吗？")){
+                this.parentNode.parentNode.remove();
+                $("#t").rows[$("#t").rows.length-1].cells[0].lastElementChild.innerHTML = getTotalMoney();
+            }
+        }
+    }
+}
+
+</script>
