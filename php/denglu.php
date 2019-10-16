@@ -2,7 +2,7 @@
      header("Content-type:text/html;charset=utf-8");
     //1、接收前端的数据
 
-    $username = $_POST['userphone'];
+    $username = $_POST['username'];
     $userpass = $_POST['userpass'];
 
     //2、处理
@@ -17,7 +17,7 @@
 
         //3)、执行SQL语句（数据传输）
         //3.1)
-        $sqlstr = "insert into shopping(phone,pass) values('$phone','$pass')";
+       $sqlstr="select * from shopping where userphone='$username' and userpass='$userpass'";
         //查询该用户名在数据库中有没有。 
         $result = mysql_query($sqlstr,$conn);
         $rows = mysql_num_rows($result);//获得结果的行数
