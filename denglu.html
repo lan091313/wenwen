@@ -43,7 +43,7 @@
 	<p class="pl">Copyright © 2019 Mobvoi Inc. All Rights Reserved. 北京羽扇智信息科技有限责任公司 京ICP备14058077号-1</p> 
 </body>
 </html>
-
+<script src="js/cookieTools.js"></script>
 <script>
 
 	$("#imgas").onclick = function(){
@@ -106,6 +106,7 @@
 	    xhr.onreadystatechange = function(){
 	        if(xhr.readyState==4 && xhr.status==200){
 	            if(xhr.responseText==1){
+	            	addCookie("userphone",$("#subn").value,7);
 	                location.href="index.html";
 	            }else{
 	                $("#messageBox").innerHTML = "亲，用户名或者密码不对";
@@ -119,21 +120,7 @@
 	    xhr.send(sendstr);
 
 	    let d = new Date();
-	    d.setDate(d.getDate()+7);
 	    document.cookie = "userphone=15095436319;expries="+d.toGMTString();
-	    alert("欢迎用户"+getValue("userphone"));
-	}
-
-	function getValue(key){
-		let str = document.cookie;
-		let arr = str.split("; ");
-		for(let i in arr){
-			if(arr[i].startsWith(key+"=")){
-				let [,value] = arr[i].split("=");
-				return value;
-			}
-		}
-		return null;
 	}
 
 
