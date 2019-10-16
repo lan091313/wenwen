@@ -27,7 +27,7 @@
 			<a href="">
 				<span class="iconfont icon-gwc"></span>
 			</a>
-			<span class="span">0</span>
+			<span id="spanNum" class="span">0</span>
 		</div>
 	</div>
 
@@ -364,7 +364,7 @@ $(function(){
 		iconCSS:"",
 		iconImg:"img/cart.png",
 		endFunction:function(element){
-			$("#span").html(parseInt($("#span").html())+1);
+			$("#spanNum").html(parseInt($("#numCha").val()));
 			console.log(element);
 			return false;
 		}
