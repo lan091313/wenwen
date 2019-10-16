@@ -33,7 +33,7 @@
 	<p class="pl">Copyright © 2019 Mobvoi Inc. All Rights Reserved. 北京羽扇智信息科技有限责任公司 京ICP备14058077号-1</p>
 </body>
 </html>
-
+<script src="js/cookieTools.js"></script>
 <script>
 	
 	$("#imgas").onclick = function(){
@@ -101,6 +101,7 @@ $("#sub_id").onclick = function(){
 	                $("#messageBox").style.color ="red";
 	                $("#messageBox").innerHTML ="注册失败";
 	            }else if(xhr.responseText=="1"){
+	            	addCookie("userphone",$("#subn").value,7);
 	                $("#messageBox").style.color ="greenyellow";
 	                $("#messageBox").innerHTML ="注册成功，请<a href='denglu.html'>登录</a>";
 	            }

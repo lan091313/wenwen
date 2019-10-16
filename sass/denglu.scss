@@ -18,9 +18,9 @@ html,body{
 
 .box{
 	width:400px; 
-	height:543px;
+	height:545px;
 	background:#fff;
-	margin:100px auto 0;
+	margin:70px auto 0;
 	border-radius: 10px;
 	border:1px solid #d6d6d6;
 	box-shadow: 0px 0px 3px 3px #e2e2e2;
@@ -28,7 +28,6 @@ html,body{
 	position: relative;
 	img{
 		height: 50px;
-		margin-bottom:33px;
 	}
 	span{
 		display:inline-block;
@@ -59,9 +58,46 @@ html,body{
 		font-size: 12px;
 		color:#d33253;
 		position:absolute;
-		top:202px;
-		left: 27px;
-		border-bottom:none;
+		top:178px;
+		left: 38px;
+	}
+	.sub{
+		margin-top: 38px
+	}
+	.imgas{
+		width: 24px;
+		height: 18px;
+		position: absolute;
+		right: 40px;
+		top: 215px;
+		cursor: hand;
+		cursor: pointer;
+		img{
+			width: 24px;
+			height: 18px;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+		}
+	}
+	ul{
+		width: 323px;
+		height: 43px;
+		padding-top: 12px;
+		position: relative;
+		margin-left: 38px;
+		text-align: left;
+		vertical-align: middle;
+		li{
+			text-indent: 23px;
+			font-size: 12px;
+			color: #000;
+			line-height: 16px;
+			margin-top: 0px;
+			background-repeat: no-repeat;
+			background-size: 14px 14px;
+			background-position: 0px 2px;
+		}
 	}
 	.btna{
 		width: 321px;
@@ -72,19 +108,19 @@ html,body{
 		background-image: url(../img/yin.jpg);
 		background-repeat: repeat-x;
 		margin-top: 40px;
-		margin-bottom: 20px;
-		.btn{
-			width: 321px;
-			height:38px;
-			border-radius: 4px;
-			border:1px solid #cecece;
-			background: #ecf0f3;
-			font-size: 14px;
-			color: #0091fa;
-			cursor: hand;
-			cursor: pointer;
-			outline: none
-		}
+		margin-bottom: 26px;
+	}
+	.btn{
+	width: 321px;
+		height:38px;
+		border-radius: 4px;
+		border:1px solid #cecece;
+		background: #ecf0f3;
+		font-size: 14px;
+		color: #0091fa;
+		cursor: hand;
+		cursor: pointer;
+		outline: none
 	}
 	a{
 		font-size:12px;
@@ -100,7 +136,7 @@ html,body{
 	}
 	.a3{
 		position:absolute;
-		bottom:160px;
+		bottom:125px;
 		left:185px;
 	}
 	.divP{
