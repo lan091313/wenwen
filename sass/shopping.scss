@@ -9,7 +9,68 @@ ul,ol,li{
 }
 a{
 	text-decoration:none;
+	color: #000;
 }
+    abbr[title], acronym[title] {
+        /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+        border-bottom: 1px dotted;
+        cursor: help;
+    }
+
+    q:before, q:after {
+        content: '';
+    }
+    /* 重置表单元素 */
+
+    legend {
+        color: #000;
+    }
+    /* for ie6 */
+
+    fieldset, img {
+        border: none;
+    }
+    /* img 搭车：让链接里的 img 无边框 */
+    /* 注：optgroup 无法扶正 */
+
+    button, input, select, textarea {
+        font-size: 100%;
+        /* 使得表单元素在 ie 下能继承字体大小 */
+    }
+    /* 重置表格元素 */
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /* 重置 hr */
+
+    hr {
+        border: none;
+        height: 1px;
+    }
+    /* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+
+    html {
+        overflow-y: scroll;
+    }
+    /*  浮动  */
+
+    .fl {
+        float: left
+    }
+
+    .fr {
+        float: right
+    }
+    /*  清除浮动  */
+
+    .clearfix:after {
+        content: " ";
+        display: block;
+        clear: both;
+        visibility: hidden;
+    }
 a:hover{
 	text-decoration:none;
 }
@@ -27,6 +88,379 @@ h2{
 	background-position: 0px 33px;
 	text-indent: 5px;
 }
+
+
+.cartMain{
+    position: relative;
+    width: 1200px;
+    min-width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 0px 100px;
+    min-height: 210px;
+    .cartMain_hd{
+	    width: 100%;
+	    height: 50px;
+	    line-height: 50px;
+	    color: #3c3c3c;
+	    .cartTop{
+		    height: 50px;
+			.list_chk{
+			    width: 80px;
+			    text-indent: 30px;
+			    label{
+				    position: absolute;
+				    left: 10px;
+				    top:19px;
+				    margin: 0;
+				}
+			}
+			.list_con{
+			    width: 312px;
+			    text-indent: 140px;
+			}
+			.list_info{
+			    padding: 0;
+			    text-indent: 15px;
+			}
+		}
+	}
+	.cartBox{
+	    width: 100%;
+	    margin-bottom: 15px;
+	    .shop_info{
+		    position: relative;
+		    width: 100%;
+		    height: 38px;
+		    background-color: #fff;
+		    line-height: 38px;
+		    vertical-align: baseline;
+		    .all_check{
+			    position: relative;
+			    float: left;
+			    width: 30px;
+			    height: 38px;
+				input[type="checkbox"]{
+				    position: absolute;
+				    z-index: 0;
+				    left: -20px;
+				    top: -20px;
+				}
+				.shop{
+				    position: absolute;
+				    top:13px;
+				}
+			}
+			.shop_name{
+			    float: left;
+			}
+		}
+		.order_content{
+		    border: 1px solid #ccc;
+		    a{
+			    display: block;
+			}
+		}
+	}
+	.order_lists{
+	    width: 100%;
+	    height: 130px;
+	    border-bottom: 1px solid #e7e7e7;
+	    li{
+		    float: left;
+		    height: 100%;
+		}
+		.list_chk{
+		    position: relative;
+		    width: 50px;
+			input[type="checkbox"]{
+			    position: absolute;
+			    z-index: 0;
+			    left: 20px;
+			    top: 55px;
+			}
+			#all{
+				 position: absolute;
+			    z-index: 1;
+			    left: 15px;
+			    top: 15px;
+			}
+			label{
+			    margin: 20px 0 0 24px;
+			}
+		}
+		.list_con{
+		    width: 342px;
+		    .list_img{
+			    width: 90px;
+			    height: 90px;
+			    margin-top: 20px;
+			    float: left;
+			    img{
+				    width: 100%;
+				    vertical-align: top;
+				}
+			}
+			.list_text{
+			    vertical-align: middle;
+			    text-align: center;
+			    line-height: 129px;
+			    a{
+				    color: #3c3c3c;
+				}
+			}
+		}
+		.list_info{
+		    width: 252px;
+		    box-sizing: border-box;
+		    padding: 20px 0;
+		    p{
+			    color: #9c9c9c;
+			    line-height: 90px;
+			    margin-left: 15px;
+			}
+		}
+		.list_price{
+		    width: 130px;
+		    .price{
+			    margin-top: 20px;
+			    line-height: 90px;
+			    font-family: Verdana,Tahoma,arial;
+			    color: #3c3c3c;
+			    font-weight: bold;
+			}
+		}
+		.list_amount{
+		    width: 120px;
+		    .amount_box{
+			    margin-top: 55px;
+			    width: 77px;
+			    height: 25px;
+			    position: relative;
+			    input{
+				    width: 39px;
+				    height: 23px;
+				    line-height: 15px;
+				    border: 1px solid #aaa;
+				    color: #343434;
+				    text-align: center;
+				    padding: 4px 0;
+				    background-color: #fff;
+				    z-index: 2;
+				    position: absolute;
+				    left: 18px;
+				    float: left;
+				}
+				a{
+				    float: left;
+				    height: 23px;
+				    width: 17px;
+				    border: 1px solid #e5e5e5;
+				    background: #f0f0f0;
+				    text-align: center;
+				    line-height: 23px;
+				    color: #444;
+				    position: absolute;
+				    top:0;
+				}
+				.reduce{
+				    left: 0;
+				}
+				.reSty{
+				    color: #cbcbcb;
+				}
+				.reSty:hover{
+				    border-right: none;
+				    border-color: #e5e5e5;
+				    text-decoration: none;
+				    color: #cbcbcb;
+				}
+				.plus{
+				    border-left-color: transparent;
+				    right: 0;
+				}
+			}
+		}
+		.list_sum{
+		    width: 140px;
+		    .sum_price{
+			    line-height: 90px;
+			    margin-top: 20px;
+			    font-family: Verdana,Tahoma,arial;
+			    color: #ff0000;
+			    font-weight: bold;
+			}
+		}
+		.list_op{
+		    width: 164px;
+		    .del{
+			    margin-top: 20px;
+			    line-height: 90px;
+			}
+		}
+	}
+	.bar-wrapper{
+	    width: 1200px;
+	    height: 50px;
+	    position: fixed;
+	    bottom: -1px;
+	    z-index: 99;
+	    background: #e5e5e5;
+	    .bar-right{
+		    float: right;
+		    color: #3c3c3c;
+		    strong{
+			    color: #f40;
+			}
+			.piece{
+			    float: left;
+			    min-width: 110px;
+			    margin-right: 20px;
+			    height: 50px;
+			    line-height: 50px;
+			    .piece_num{
+				    display: inline-block;
+				    padding: 0 10px;
+				    font-weight: 700;
+				    font-size: 18px;
+				    font-family: tohoma,arial;
+				}
+			}
+			.totalMoney{
+			    float: left;
+			    min-width: 100px;
+			    height: 50px;
+			    line-height: 50px;
+			    .total_text{
+				    float: right;
+				    font-weight: 400;
+				    font-size: 20px;
+				    font-family: Arial;
+				    vertical-align: middle;
+				    margin-right: 10px;
+				    margin-left: 15px;
+				}
+			}
+			.calBtn{
+			    float: left;
+			    a{
+				    display: block;
+				    width: 120px;
+				    height: 50px;
+				    color: #fff;
+				    background: #B0B0B0;
+				    cursor: not-allowed;
+				    font-size: 22px;
+				    letter-spacing: 5px;
+				    text-decoration: none;
+				    line-height: 50px;
+				    text-align: center;
+				    border-radius: 2px;
+				}
+				a.btn_sty{
+				    background: #f40;
+				    cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.order_lists:last-child{
+    border-bottom: none;
+}
+.order_lists .list_con .list_text a:hover{
+    color: #ff873e;
+    text-decoration: underline;
+}
+.order_lists .list_amount .amount_box a:hover{
+    border-color: #ff873e;
+    text-decoration: none;
+    color: #ff873e;
+    z-index: 3;
+}
+.model_bg{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 999;
+    display: none;
+}
+.my_model{
+    position: fixed;
+    display: none;
+    top:50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -200px;
+    z-index: 9999;
+    width: 360px;
+    height: 120px;
+    border: 1px solid #aeaeae;
+    border-radius: 3px;
+    padding: 20px;
+    background: #fff;
+    .title{
+	    font-size: 14px;
+	    color: #3c3c3c;
+	    font-weight: 700;
+	    margin-bottom: 20px;
+	    .closeModel{
+		    float: right;
+		    cursor: pointer;
+		}
+	}
+	p{
+	    line-height:10px;
+	}
+	opBtn{
+	    margin-top: 20px;
+	    a{
+		    width: 58px;
+		    height: 28px;
+		    line-height: 28px;
+		    text-align: center;
+		    -webkit-border-radius: 1px;
+		    -moz-border-radius: 1px;
+		    -ms-border-radius: 1px;
+		    border-radius: 1px;
+		    display: inline-block;
+		    margin-right: 10px;
+		    font-weight: 700;
+		}
+	}
+	.dialog-sure{
+	    background: #52a0e5;
+	    color: #fff;
+	    border: 1px solid #52a0e5;
+	    display: inline-block;
+	    width: 55px;
+	    height: 20px;
+	    text-align: center;
+	    line-height: 20px;
+	    margin-top: 15px;
+	    margin-right: 5px;
+   		border-radius: 3px
+	}
+	.dialog-close{
+	    background: #fff;
+	    border: 1px solid #d9d9d9;
+	    color: #3c3c3c;
+	    display: inline-block;
+	    width: 55px;
+	    height: 20px;
+	    text-align: center;
+	    line-height: 20px;
+	    margin-top: 15px;
+   		border-radius: 3px
+	}
+}
+
+
+
+
 
 /*header*/
 .header{
@@ -86,76 +520,6 @@ h2{
 	}
 }
 
-/*shopBar*/
-.winder{
-	margin:auto;
-	width:1080px;
-	.shopBar{
-		width:100%;
-		height:42px;
-		margin:0 auto 30px;
-		border-left:4px solid #bababa;
-		box-sizing:border-box;
-		font-size:28px;
-		color:#333;
-		line-height:42px;
-		text-indent:6px;
-	}
-	table{
-		width:100%;
-		tr{
-			border:1px solid #ebe6e6;
-			background:#fff;
-			width:100%;
-			height:100px;
-			th{
-				vertical-align:middle;
-				text-align:center;
-			}
-			td{
-				background:#fffbea;
-				vertical-align:middle;
-				text-align:center;
-				#inNum{
-					width:38px;
-					height:38px;
-					background:#fff;
-					border:1px solid #ececec;
-					font-size:14px;
-					color:#9a5555;
-					text-align:center;
-					outline: none
-				}
-				button{
-					width:20px;
-					height:20px;
-					background:#eeeeee;
-					border:none;
-					outline: none
-				}
-				#clect{
-					width:55px;
-					height:30px;
-				}
-				#addId{
-					font-size:18px;
-					color:#fff;
-					background:#ef4043;
-					width:192px;
-					height:48px;
-					border-radius:4px;
-					margin-left:20px;
-					margin-right: 30px;
-				}
-				span{
-					font-size:20px;
-					color:#ff4444;
-				}
-			}
-		}
-			
-	}
-}
 
 
 /*footer*/
@@ -164,7 +528,6 @@ h2{
 	width: 100%;
 	height: 155px;
 	background: white;
-	margin-top: 124px;
 	border-bottom: 2px solid #dddede;
 	.top{
 		width: 1080px;
