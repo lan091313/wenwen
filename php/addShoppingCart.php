@@ -5,10 +5,11 @@
 	$vipName   = $_REQUEST['vipName'];
 	$goodsId   = $_REQUEST['goodsId'];
 	$goodsCount = $_REQUEST['goodsCount'];
+	$image = $_REQUEST['image']
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
-	$conn = mysql_connect("localhost","root","qianfeng");
+	$conn = mysql_connect("localhost","root","root");
 	
 	//2）、选择数据库（找目的地）
 	if(!mysql_select_db("shoppingcenter",$conn)){
@@ -19,11 +20,11 @@
 	$result = mysql_query("select * from shoppingCart where vipName='".$vipName."' and goodsId='".$goodsId."'",$conn);
 	//3.1)先查找该商品是否在购物车中存在
 	if(mysql_num_rows($result)>0){
-		//如果存在，则使用update语句
-		$sqlstr = "update shoppingCart set goodsCount=goodsCount+".$goodsCount." where vipName='".$vipName."' and goodsId='".$goodsId."'";
+		//如果存在，则使用update语句(修改)
+		$sqlstr = "update shoppingCart set goodsCount=goodsCount+".$goodsCount." where vipName='".$vipName."' and goodsId='".$goodsId."' and image='".$image."'";
 	}else{
 		//如果不存在，则使用insert语句	
-		$sqlstr = "insert into shoppingCart values('".$vipName."','".$goodsId."','".$goodsCount."')";		
+		$sqlstr = "insert into shoppingCart values('".$vipName."','".$goodsId."','".$goodsCount."','".$image."')";		
 	}
 	
 	$result=mysql_query($sqlstr,$conn);	

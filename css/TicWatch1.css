@@ -395,6 +395,17 @@ sexMine #boxMo .bigBox .sexLeft_1 {
   border-radius: 2px;
   outline: none;
 }
+#flex{
+  width: 280px;
+  height: 40px;
+  background: #ef4043;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  margin-top: -19px;
+  font-size: 18px;
+  color: #fff;
+}
 
 .vid {
   width: 1080px;
