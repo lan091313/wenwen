@@ -394,7 +394,7 @@ addShop.onclick = function(){
 	            }else if(xhr.responseText=="0"){
 	            	$("#flex").style.display="block";
 	                $("#flex").innerHTML ="添加商品失败";
-	            }else if(xhr.responseText=="1"){
+	            }else if(xhr.responseText=="1"){;
 	            	addCookie("userphone",$("#subn").value,7);
 	            	$("#flex").style.display="block";
 	                $("#flex").innerHTML ="添加成功，请<a href='denglu.html'>去购物车结算</a>";
@@ -408,6 +408,4 @@ addShop.onclick = function(){
 		xhr.send(sendstr);
 
 }
-
-	
 </script>
