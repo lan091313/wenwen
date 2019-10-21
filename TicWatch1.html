@@ -398,7 +398,10 @@ addShop.onclick = function(){
 	            }else if(xhr.responseText=="1"){
 	            	flex.style.display="block";
 	                flex.innerHTML ="添加成功，请<a href='denglu.html'>去购物车结算</a>";
-	            }
+				}
+				setTimeout(function(){
+					flex.style.display="none";
+				},5000)
 	        }
 		}
 		//post方式：设置请求头
