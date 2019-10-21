@@ -47,7 +47,7 @@
 		<div id="boxMo">
 			<div class="bigBox" id="bigBox" style="display: block;">
 				<div class="sexLeft">
-					<i id="sex_left" class="showimg"><img id="image" src="img/tic1.png" alt=""></i>
+					<i id="sex_left" class="showimg"><img id="images" src="img/tic1.png" alt=""></i>
 					<i id="sex_left"><img src="img/tic2.png" alt=""></i>
 					<i id="sex_left"><img src="img/tic3.png" alt=""></i>
 					<i id="sex_left"><img src="img/tic4.png" alt=""></i>
@@ -379,7 +379,8 @@ let addShop = document.getElementById("addShop");
 let vipName = document.getElementById("vipName");
 let goodsId = document.getElementById("goodsId");
 let numCha = document.getElementById("numCha");
-let image = document.getElementById("image");
+let image = document.getElementById("images");
+let flex = document.getElementById("flex");
 addShop.onclick = function(){
     //1、
     let xhr = new XMLHttpRequest();
@@ -389,22 +390,21 @@ addShop.onclick = function(){
 		xhr.onreadystatechange = function(){
 			if(xhr.readyState==4 && xhr.status==200){
 	            if(xhr.responseText=="-1"){
-	            	$("#flex").style.display="block";
-	                $("#flex").innerHTML ="该商品已存在";
+	            	flex.style.display="block";
+	                flex.innerHTML ="该商品已存在";
 	            }else if(xhr.responseText=="0"){
-	            	$("#flex").style.display="block";
-	                $("#flex").innerHTML ="添加商品失败";
-	            }else if(xhr.responseText=="1"){;
-	            	addCookie("userphone",$("#subn").value,7);
-	            	$("#flex").style.display="block";
-	                $("#flex").innerHTML ="添加成功，请<a href='denglu.html'>去购物车结算</a>";
+	            	flex.style.display="block";
+	                flex.innerHTML ="添加商品失败";
+	            }else if(xhr.responseText=="1"){
+	            	flex.style.display="block";
+	                flex.innerHTML ="添加成功，请<a href='denglu.html'>去购物车结算</a>";
 	            }
 	        }
 		}
 		//post方式：设置请求头
 		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		//post方式：把传给服务器端数据（键值对）放在send函数的参数里
-		let sendstr = `vipName=${vipName.innerHTML}&goodsId=${goodsId.innerHTML}$goodsCount=${numCha.value}$image=${image.src}`;
+		let sendstr = `vipName=${vipName.innerHTML}&goodsId=${goodsId.innerHTML}&goodsCount=${numCha.value}&image=${image.src}`;
 		xhr.send(sendstr);
 
 }
